@@ -74,7 +74,7 @@ fi
 #-----------------Write collected data to *.te files---------------------
 permissions_set
 echo "allow $SERVICE_NAME $SERVICE_TYPE:$SERVICE_TYPE2 { $SERVICE_PERM_ARR };" >> ~/out/"$SERVICE_NAME"non_cleaned.te
-sort -u ~/out/"$SERVICE_NAME"non_cleaned.te >> ~/out/sepolicy/$SERVICE_NAME.te
+sort -u ~/out/"$SERVICE_NAME"non_cleaned.te > ~/out/sepolicy/$SERVICE_NAME.te
 done < $LOG_FILE
 rm -rf ~/out/*.te
 #------------------------------------------------------------------------
